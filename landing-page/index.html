@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimi Enterprise — Your AI Software Company</title>
+    <meta name="description" content="Run a complete virtual IT company with AI agents. CEO, CTO, developers, QA—all working together.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid #1e293b;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #7dd3fc;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #38bdf8;
+            color: #38bdf8;
+        }
+        
+        .btn-secondary:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            color: #94a3b8;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+        
+        .stat-label {
+            color: #64748b;
+        }
+        
+        /* Code Preview */
+        .code-preview {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+        
+        .code-preview .comment {
+            color: #64748b;
+        }
+        
+        .code-preview .command {
+            color: #38bdf8;
+        }
+        
+        .code-preview .output {
+            color: #4ade80;
+        }
+        
+        /* Features */
+        .features {
+            padding: 100px 0;
+            background: #1e293b;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature {
+            background: #0f172a;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #38bdf8;
+        }
+        
+        .feature p {
+            color: #94a3b8;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 100px 0;
+        }
+        
+        .pricing h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .pricing-subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 60px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .pricing-card {
+            background: #1e293b;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            text-align: center;
+        }
+        
+        .pricing-card.featured {
+            border-color: #38bdf8;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-card .price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #38bdf8;
+            margin: 20px 0;
+        }
+        
+        .pricing-card .price span {
+            font-size: 1rem;
+            color: #64748b;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            margin: 30px 0;
+        }
+        
+        .pricing-card li {
+            padding: 10px 0;
+            border-bottom: 1px solid #334155;
+        }
+        
+        .pricing-card li:before {
+            content: "✓ ";
+            color: #4ade80;
+        }
+        
+        /* CTA */
+        .cta {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            color: #94a3b8;
+            margin-bottom: 40px;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid #1e293b;
+            text-align: center;
+            color: #64748b;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #38bdf8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🏢 Kimi Enterprise</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="https://docs.kimienterprise.dev">Docs</a></li>
+                <li><a href="https://github.com/abdesselam-tech/kimi-enterprise">GitHub</a></li>
+            </ul>
+            <a href="https://github.com/sponsors/abdesselam-tech" class="btn btn-secondary">Sponsor</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Your AI Software Company</h1>
+            <p>Run a complete virtual IT organization with AI agents. CEO, CTO, developers, QA—all working together to ship code.</p>
+            
+            <div class="hero-buttons">
+                <a href="#get-started" class="btn">Get Started Free</a>
+                <a href="https://github.com/abdesselam-tech/kimi-enterprise" class="btn btn-secondary">View on GitHub</a>
+            </div>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">12+</div>
+                    <div class="stat-label">Agent Roles</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">90%</div>
+                    <div class="stat-label">Cost Savings</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">5x</div>
+                    <div class="stat-label">Faster Shipping</div>
+                </div>
+            </div>
+            
+            <div class="code-preview" style="margin-top: 60px;">
+                <div class="comment"># One command to start your AI company</div>
+                <div><span class="command">$</span> ke init --name MyProject --template startup</div>
+                <div style="margin-top: 15px;"><span class="command">$</span> ke start</div>
+                <div class="output" style="margin-top: 15px;">
+🚀 Launching Kimi Enterprise...<br>
+✓ Message Bus started<br>
+✓ Watchdog active<br>
+✓ 10 agents onboarded<br><br>
+✅ Enterprise operational!<br>
+   Dashboard: ke status<br>
+   CEO Office: ke ceo
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Everything You Need to Ship Faster</h2>
+            
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">🏗️</div>
+                    <h3>Hierarchical Organization</h3>
+                    <p>Simulate real company structure: CEO → CTO → VPs → Directors → Engineering Managers → ICs. Each agent knows their role.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h3>Smart Cost Control</h3>
+                    <p>Set daily budgets, get alerts at 50%/75%/95%, and automatic circuit breakers. Never get surprised by API costs.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📈</div>
+                    <h3>Auto-Scaling</h3>
+                    <p>Agents automatically scale up when workload increases and down when idle. Pay only for what you use.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Git Integration</h3>
+                    <p>Automatic PR creation, code review workflows, and conventional commits. Your AI team works like a real dev team.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <h3>Rich Dashboard</h3>
+                    <p>Monitor agent status, task queues, and budget burn in real-time. Beautiful CLI and web dashboard.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Safety First</h3>
+                    <p>Emergency halt, audit trails, and resource limits. You're always in control of your AI organization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Simple, Transparent Pricing</h2>
+            <p class="pricing-subtitle">Start free. Scale as you grow. Always cost-effective.</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Open Source</h3>
+                    <div class="price">Free</div>
+                    <ul>
+                        <li>Unlimited agents</li>
+                        <li>Full feature set</li>
+                        <li>Community support</li>
+                        <li>Self-hosted</li>
+                        <li>MIT licensed</li>
+                    </ul>
+                    <a href="https://github.com/abdesselam-tech/kimi-enterprise" class="btn btn-secondary">Get Started</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <h3>Cloud Pro</h3>
+                    <div class="price">$49<span>/month</span></div>
+                    <ul>
+                        <li>Everything in Open Source</li>
+                        <li>Managed infrastructure</li>
+                        <li>Web dashboard</li>
+                        <li>Team collaboration</li>
+                        <li>Priority support</li>
+                        <li>Automatic backups</li>
+                    </ul>
+                    <a href="#" class="btn">Coming Soon</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                    <ul>
+                        <li>Everything in Cloud Pro</li>
+                        <li>SSO & SAML</li>
+                        <li>Audit logs</li>
+                        <li>SLA guarantee</li>
+                        <li>Dedicated support</li>
+                        <li>Custom integrations</li>
+                    </ul>
+                    <a href="mailto:abdesselamtech@gmail.com" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="get-started">
+        <div class="container">
+            <h2>Ready to Build Your Virtual Dev Team?</h2>
+            <p>Join thousands of developers shipping faster with AI agents.</p>
+            <a href="https://github.com/abdesselam-tech/kimi-enterprise" class="btn" style="font-size: 1.2rem; padding: 15px 40px;">Get Started Free →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/abdesselam-tech/kimi-enterprise">GitHub</a>
+                <a href="https://docs.kimienterprise.dev">Documentation</a>
+                <a href="https://discord.gg/your-invite">Discord</a>
+                <a href="https://twitter.com/kimienterprise">Twitter</a>
+                <a href="SPONSORS.md">Sponsor</a>
+            </div>
+            <p>© 2024 Kimi Enterprise. Open source under MIT License.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Not affiliated with Moonshot AI. Built with ❤️ by the community.</p>
+        </div>
+    </footer>
+</body>
+</html>

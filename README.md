@@ -236,3 +236,26 @@ MIT License - See [LICENSE](LICENSE)
 **[Request Feature](https://github.com/abdesselam-tech/kimi-enterprise/issues)**
 
 </div>
+
+---
+
+## 💖 Sponsors
+
+Love Kimi Enterprise? [Become a sponsor](https://github.com/sponsors/abdesselam-tech) to help us build the future of AI-driven development!
+
+### 🚀 Founding Sponsors
+*Your logo here - [Become a Founding Sponsor](https://github.com/sponsors/abdesselam-tech)*
+
+### 🏢 Enterprise Supporters
+*Your logo here - [Become an Enterprise Supporter](https://github.com/sponsors/abdesselam-tech)*
+
+### 💻 Developer Sponsors
+*Your name here - [Become a Developer Sponsor](https://github.com/sponsors/abdesselam-tech)*
+
+### ☕ Coffee Supporters
+*Your name here - [Buy us a coffee](https://github.com/sponsors/abdesselam-tech)*
+
+---
+
+**[❤️ Sponsor This Project](https://github.com/sponsors/abdesselam-tech)** | See all [sponsor tiers and perks](SPONSORS.md)
+

@@ -1,17 +1,27 @@
 # GitHub Sponsors and funding configuration
 # Learn more: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository
 
-# GitHub Sponsors (enable at https://github.com/sponsors)
+# GitHub Sponsors - Enable at https://github.com/sponsors/abdesselam-tech
 github: [abdesselam-tech]
 
-# Open Collective (optional)
+# Open Collective (optional - for transparent expenses)
 # open_collective: kimi-enterprise
 
-# Ko-fi (optional)
-# ko_fi: username
+# Ko-fi (alternative platform)
+# ko_fi: abdesselam
 
-# Patreon (optional)
-# patreon: username
+# Patreon (alternative platform)
+# patreon: abdesselam
 
-# Custom funding URLs
-custom: ['https://github.com/abdesselam-tech/kimi-enterprise#sponsorship']
+# Liberapay (open source friendly)
+# liberapay: abdesselam
+
+# Buy Me a Coffee
+# custom: ["https://www.buymeacoffee.com/abdesselam"]
+
+# Additional funding methods
+# tidelift: npm/kimi-enterprise  # For package managers
+# community_bridge: # Linux Foundation
+# issuehunt: # IssueHunt.io
+# otechie: # Otechie
+# custom: ["https://your-custom-url.com"]
