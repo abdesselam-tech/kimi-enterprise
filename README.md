@@ -4,7 +4,7 @@
 
 **Enterprise-grade multi-agent orchestration framework for Kimi CLI**
 
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/YOUR_USERNAME/kimi-enterprise)
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/abdesselam-tech/kimi-enterprise)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
@@ -30,10 +30,10 @@ Run a complete virtual IT company with AI agents—from CEO to Junior Developers
 
 ```bash
 # Install system-wide
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/kimi-enterprise/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/abdesselam-tech/kimi-enterprise/main/install.sh | bash
 
 # Or clone and install manually
-git clone https://github.com/YOUR_USERNAME/kimi-enterprise.git
+git clone https://github.com/abdesselam-tech/kimi-enterprise.git
 cd kimi-enterprise
 make install
 ```
@@ -231,8 +231,8 @@ MIT License - See [LICENSE](LICENSE)
 
 <div align="center">
 
-**[Documentation](https://github.com/YOUR_USERNAME/kimi-enterprise#readme)** •
-**[Report Bug](https://github.com/YOUR_USERNAME/kimi-enterprise/issues)** •
-**[Request Feature](https://github.com/YOUR_USERNAME/kimi-enterprise/issues)**
+**[Documentation](https://github.com/abdesselam-tech/kimi-enterprise#readme)** •
+**[Report Bug](https://github.com/abdesselam-tech/kimi-enterprise/issues)** •
+**[Request Feature](https://github.com/abdesselam-tech/kimi-enterprise/issues)**
 
 </div>

@@ -5,7 +5,7 @@ Thank you for your interest in contributing to Kimi Enterprise!
 ## Development Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/kimi-enterprise.git
+git clone https://github.com/abdesselam-tech/kimi-enterprise.git
 cd kimi-enterprise
 pip install -e .
 ```

@@ -5,7 +5,7 @@
 set -euo pipefail
 
 INSTALL_DIR="${HOME}/.kimi-enterprise"
-REPO_URL="${REPO_URL:-https://github.com/YOUR_USERNAME/kimi-enterprise.git}"
+REPO_URL="${REPO_URL:-https://github.com/abdesselam-tech/kimi-enterprise.git}"
 BRANCH="${BRANCH:-main}"
 
 RED='\033[0;31m'; GREEN='\033[0;32m'; BLUE='\033[0;34m'; YELLOW='\033[1;33m'; NC='\033[0m'

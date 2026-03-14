@@ -17,7 +17,7 @@ setup(
     description="Enterprise-grade multi-agent orchestration for Kimi CLI",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/YOUR_USERNAME/kimi-enterprise",
+    url="https://github.com/abdesselam-tech/kimi-enterprise",
     packages=find_packages(where="lib"),
     package_dir={"": "lib"},
     classifiers=[
@@ -51,8 +51,8 @@ setup(
         "kimi_enterprise": ["../share/**/*"],
     },
     project_urls={
-        "Bug Reports": "https://github.com/YOUR_USERNAME/kimi-enterprise/issues",
-        "Source": "https://github.com/YOUR_USERNAME/kimi-enterprise",
-        "Documentation": "https://github.com/YOUR_USERNAME/kimi-enterprise#readme",
+        "Bug Reports": "https://github.com/abdesselam-tech/kimi-enterprise/issues",
+        "Source": "https://github.com/abdesselam-tech/kimi-enterprise",
+        "Documentation": "https://github.com/abdesselam-tech/kimi-enterprise#readme",
     },
 )
