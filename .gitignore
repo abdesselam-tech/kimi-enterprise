@@ -1,0 +1,64 @@
+# Kimi Enterprise Git Ignore
+
+# Runtime data
+var/
+*.pid
+*.sock
+*.log
+*.db
+*.db-journal
+*.gz
+
+# Agent workspaces (created at runtime)
+agents/
+
+# User-specific configs
+config.json
+kimi.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary files
+*.tmp
+*.bak

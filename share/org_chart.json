@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "hierarchy": [
+    ["ceo", "cto", "vp_product"],
+    ["vp_engineering", "vp_architecture"],
+    ["dir_frontend", "dir_backend", "dir_devops", "dir_qa"],
+    ["em_frontend", "em_backend", "em_devops", "em_qa", "pm"],
+    ["senior_fe", "mid_fe", "junior_fe", "designer", 
+     "senior_be", "mid_be", "junior_be", "dba",
+     "senior_devops", "cloud_arch", "sec_eng",
+     "senior_qa", "qa_arch", "tech_writer"]
+  ],
+  "agents": {
+    "ceo": {
+      "role": "Chief Executive Officer",
+      "dept": "executive",
+      "prompt": "c-suite/ceo.md",
+      "tier": "executive",
+      "skills": ["strategy", "budgeting", "crisis_management"]
+    },
+    "cto": {
+      "role": "Chief Technology Officer",
+      "dept": "executive",
+      "manager": "ceo",
+      "prompt": "c-suite/cto.md",
+      "tier": "executive",
+      "skills": ["architecture", "security", "technical_strategy"]
+    },
+    "senior_fe": {
+      "role": "Senior Frontend Engineer",
+      "dept": "engineering",
+      "manager": "em_frontend",
+      "prompt": "ics/senior-frontend.md",
+      "tier": "senior",
+      "skills": ["react", "typescript", "architecture", "mentoring"]
+    }
+  },
+  "templates": {
+    "minimal": ["ceo", "senior_fe"],
+    "startup": ["ceo", "cto", "senior_fe", "senior_be", "qa_arch"],
+    "full": null
+  }
+}

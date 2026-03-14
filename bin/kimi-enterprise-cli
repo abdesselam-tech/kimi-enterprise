@@ -1,0 +1,9 @@
+#!/bin/bash
+# Kimi Enterprise CLI Entry Point
+# This script ensures proper Python path setup
+
+ENTERPRISE_ROOT="$HOME/.kimi-enterprise"
+PYTHONPATH="$ENTERPRISE_ROOT/lib:$PYTHONPATH"
+
+export PYTHONPATH
+exec python3 "$ENTERPRISE_ROOT/lib/kimi_enterprise/cli.py" "$@"
